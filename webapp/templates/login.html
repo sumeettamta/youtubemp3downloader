@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div class="loginFormWrapper">
+                        <form action="" method="post" accept-charset="utf-8" class="form-stacked login loginForm login_form">                            <table class="loginFormTable">
+                            <!--{% csrf_token %}-->
+                            {% if message %}
+						        		<div>
+                                            <span id="errorMsg">
+					            			{{message}}</span>
+					            		</div>
+				            		{% endif %}
+                                <tr>
+                                    <td class="labelColoum">Username: </td>
+                                    <td class="inputColoum">
+                                        <input id="username" type="text" name="email" placeholder="Username" title="email" class="inputTextBox"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="labelColoum">Password: </td>
+                                    <td class="inputColoum">
+                                        <input id="password" type="password" name="password" placeholder="Password" title="Password" class="inputTextBox"/>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="errorDiv">
+                             </div>
+                            <div class="submitFormDiv">
+                            <a href="{{ BASE_URL }}website/forgot-password/"> Forgot your password? </a>
+                                </div>
+                            <div class="submitFormDiv">
+                                <input type="submit" value="Log In" class="submit_btn"/>
+                            </div>
+                        </form>
+                    </div>
+
+</body>
+</html>
